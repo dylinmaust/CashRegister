@@ -17,7 +17,7 @@ namespace CashRegister.Domain.SalesAggregate
         {
             get
             {
-                return String.Join(" , ",
+                return String.Join(", ",
                     ChangeDue.Select(x => $"{x.Value} {(x.Value > 1 ? x.Key.NamePlural : x.Key.NameSingular)}"));
             }
         }
